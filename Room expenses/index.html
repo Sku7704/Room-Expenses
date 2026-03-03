@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Expense Manager</title>
+
+    <!-- Modern clean font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Layout Wrapper -->
+        <div class="app-container">
+
+            <!-- Top Navigation -->
+            <header class="app-header">
+                <div class="logo">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h1>Room Expense</h1>
+                </div>
+
+                <!-- Main Navigation (Now in Header) -->
+                <nav class="app-nav" id="appNav" style="display: none;">
+                    <div class="nav-indicator" id="navIndicator"></div>
+                    <button class="nav-btn active" data-view="dashboard">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-btn" data-view="add-expense">
+                        <i class="fa-solid fa-plus-circle"></i>
+                        <span>Add</span>
+                    </button>
+                    <button class="nav-btn" data-view="history">
+                        <i class="fa-solid fa-receipt"></i>
+                        <span>History</span>
+                    </button>
+                    <button class="nav-btn" data-view="settlement">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Settle</span>
+                    </button>
+                    <button class="nav-btn" data-view="payments">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Payments</span>
+                    </button>
+                </nav>
+
+                <div class="user-profile" id="currentUserDisplay" style="display:flex; align-items:center;">
+                    <!-- Will be filled by JS -->
+                    <span>Not logged in</span>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="app-main" id="mainContent">
+                <!-- Content gets injected here -->
+            </main>
+
+
+
+
+
+            <footer class="app-footer">
+                <p>Developed by Shashikant Upadhyay</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- HTML2PDF for PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Main Application Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
